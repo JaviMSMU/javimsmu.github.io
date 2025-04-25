@@ -1,5 +1,4 @@
-/* resetting spacing */
-
+/* Resetting spacing */
 * {
     margin: 0;
     padding: 0;
@@ -10,14 +9,13 @@ body, html {
     width: 100%;
 }
 
-/* navigation bar and top menu */
-
-.menu{
+/* Navigation bar and top menu */
+.menu {
     width: 100%;
     margin-top: 105px;
 }
 
-.menu ul{
+.menu ul {
     list-style: none;
     margin: 0px;
     padding: 0px;
@@ -47,43 +45,48 @@ body, html {
     background-color: red;
     color: white;
 }
-.navbar{
+
+/* Navbar Styling */
+.navbar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
+    padding: 0px; /* Default padding */
     width: 100%;
     position: sticky;
-    background-color: white;
     top: 0;
     z-index: 1000;
+    background-color: white;
+    transition: padding 0.4s ease, height 0.4s ease, background-color 0.4s ease;
 }
 
 #title {
     position: absolute;
-    top: 45px;
+    top: 45px; /* Original position */
     left: 0;
     right: 0;
     text-align: center;
     font-family: 'Lato', sans-serif;
     color: red;
     font-size: 30px;
+    transition: top 0.4s ease, opacity 0.4s ease;
 }
 
-
-/* logo positioning/sizing */
-
+/* Logo Styling */
 .logo {
     position: absolute;
-    top: 10px;
+    top: 10px; /* Original top position */
     left: 10px;
+    transition: transform 0.4s ease, top 0.4s ease, left 0.4s ease;
 }
 
-.logo img{
-    width: 130px;
+.logo img {
+    width: 130px; /* Default size */
     height: auto;
+    transition: width 0.4s ease;
 }
 
+/* Red Divider Line */
 #insertLine {
     width: 100%;
     border-top: 6px solid red;
@@ -91,18 +94,50 @@ body, html {
     padding: 0;
     position: relative;
     left: 0;
+    top: 0; /* Default top position */
+    transition: top 0.4s ease;
 }
 
-/* body text formatting */
-
-.body{
+/* Body text formatting */
+.body {
     font-family: 'Baloo 2', sans-serif;
     margin-left: 15px;
-    margin-top: 10px;
     font-weight: 500;
     color: black;
 }
 
-.body p{
+.body p {
     margin-bottom: 10px;
+}
+
+/* Shrinking behavior */
+.navbar.shrink {
+    padding: 10px 0; /* Shrinking navbar */
+    height: 55px;
+    position: fixed; /* Change sticky to fixed for smoother scrolling */
+    top: 0;
+}
+
+.navbar.shrink #title {
+    top: -50px; /* title disappears up */
+    opacity: 0;
+}
+
+.navbar.shrink #insertLine {
+    top: -6px; /* adjust divider position */
+}
+
+.navbar.shrink .menu {
+    margin-top: 5px; 
+}
+
+.navbar.shrink .logo {
+    transform: scale(0.50); /* change size */
+    top: -23px; /* change logo height */
+    left: -15px; /* move logo left */
+}
+
+.navbar.shrink .logo img {
+    width: 100px; 
+    height: auto;
 }
