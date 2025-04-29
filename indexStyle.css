@@ -51,7 +51,7 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px; /* Default padding */
+    padding: 0px; /* default padding */
     width: 100%;
     position: sticky;
     top: 0;
@@ -62,7 +62,7 @@ body, html {
 
 #title {
     position: absolute;
-    top: 45px; /* Original position */
+    top: 45px; /* original position */
     left: 0;
     right: 0;
     text-align: center;
@@ -72,21 +72,21 @@ body, html {
     transition: top 0.4s ease, opacity 0.4s ease;
 }
 
-/* Logo Styling */
+/* Logo styling */
 .logo {
     position: absolute;
-    top: 10px; /* Original top position */
+    top: 10px;
     left: 10px;
     transition: transform 0.4s ease, top 0.4s ease, left 0.4s ease;
 }
 
 .logo img {
-    width: 130px; /* Default size */
+    width: 130px; /* default size */
     height: auto;
     transition: width 0.4s ease;
 }
 
-/* Red Divider Line */
+/* Red divider line */
 #insertLine {
     width: 100%;
     border-top: 6px solid red;
@@ -94,7 +94,7 @@ body, html {
     padding: 0;
     position: relative;
     left: 0;
-    top: 0; /* Default top position */
+    top: 0;
     transition: top 0.4s ease;
 }
 
@@ -110,11 +110,11 @@ body, html {
     margin-bottom: 10px;
 }
 
-/* Shrinking behavior */
+/* Shrinking navbar */
 .navbar.shrink {
-    padding: 10px 0; /* Shrinking navbar */
+    padding: 10px 0;
     height: 55px;
-    position: fixed; /* Change sticky to fixed for smoother scrolling */
+    position: fixed;
     top: 0;
 }
 
@@ -141,3 +141,4 @@ body, html {
     width: 100px; 
     height: auto;
 }
+
