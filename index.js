@@ -1,41 +1,39 @@
-window.onscroll = function() {
-    var navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 20) {
         navbar.classList.add('shrink');
     } else {
         navbar.classList.remove('shrink');
     }
-};
+});
 
-let currentIndex = 0;
-const slides = document.querySelectorAll('.slideshow-container .slide');
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
 
 function showSlide(index) {
-    // Hide all slides
-    slides.forEach(slide => {
-        slide.style.display = 'none';
-    });
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    dots[i].classList.remove("active");
+  });
 
-    // Show the current slide
-    slides[index].style.display = 'block';
+  slides[index].classList.add("active");
+  dots[index].classList.add("active");
+  slideIndex = index;
 }
 
+// automatic slideshow (if you have it)
 function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length; // Loop back to the first slide
-    showSlide(currentIndex);
+  slideIndex++;
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  }
+  showSlide(slideIndex);
 }
 
-function prevSlide() {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Loop back to the last slide
-    showSlide(currentIndex);
+setInterval(nextSlide, 5000); // changes every 5 seconds — you can increase this
+
+// dot click handler
+function currentSlide(index) {
+  showSlide(index);
 }
-
-// Automatically change slides every 3 seconds
-setInterval(nextSlide, 3000);
-
-// Optionally, you can add event listeners for previous and next buttons
-document.querySelector('.prev').addEventListener('click', prevSlide);
-document.querySelector('.next').addEventListener('click', nextSlide);
-
-// Show the first slide initially
-showSlide(currentIndex);
