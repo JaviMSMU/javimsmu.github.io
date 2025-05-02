@@ -22,7 +22,7 @@ function showSlide(index) {
   slideIndex = index;
 }
 
-// automatic slideshow (if you have it)
+// auto slideshow
 function nextSlide() {
   slideIndex++;
   if (slideIndex >= slides.length) {
@@ -31,7 +31,7 @@ function nextSlide() {
   showSlide(slideIndex);
 }
 
-setInterval(nextSlide, 5000); // changes every 5 seconds — you can increase this
+setInterval(nextSlide, 5000);
 
 // dot click handler
 function currentSlide(index) {
