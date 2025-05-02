@@ -51,9 +51,9 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px; /* default padding */
+    padding: 0px;
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
     background-color: white;
@@ -80,6 +80,12 @@ body, html {
     transition: transform 0.4s ease, top 0.4s ease, left 0.4s ease;
 }
 
+.logo a {
+    display: inline-block;
+    position: relative;
+    z-index: 1100;
+}  
+
 .logo img {
     width: 130px; /* default size */
     height: auto;
@@ -87,7 +93,7 @@ body, html {
 }
 
 /* Red divider line */
-#insertLine {
+.insertLine {
     width: 100%;
     border-top: 6px solid red;
     margin: 0;
@@ -98,16 +104,155 @@ body, html {
     transition: top 0.4s ease;
 }
 
-/* Body text formatting */
-.body {
+/* Geography sec. formatting */
+.geography-section {
     font-family: 'Baloo 2', sans-serif;
-    margin-left: 15px;
-    font-weight: 500;
-    color: black;
+    display: flex;
+    background-image: url('images/geobackground.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.body p {
-    margin-bottom: 10px;
+.geography-section p, .geography-section h3{
+    margin-top: 5px;
+}
+
+.left {
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.right {
+    width: 40%;
+}
+
+/* History sec. formatting */
+.history-section {
+    font-family: 'Baloo 2', sans-serif;
+    display: flex;
+    background-image: url('images/historypic.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.history-section p, .history-section h3{
+    margin-top: 5px;
+}
+
+/* Destination sec. formatting */
+.destination-section {
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.destination-section img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    object-position: 50% 70%;
+    margin-top: -5px;
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+    will-change: transform;
+    display: block;
+}
+
+.destination-section a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.destination-section a .destination-caption {
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    margin-right: -10px;
+    color: white;
+    font-size: 40px;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+}
+
+.destination-section img:hover {
+    transform: scale(1.09);
+}
+
+.destination-section a:nth-of-type(2) img {
+    object-position: 50% 40%;
+}
+
+.destination-section a:nth-of-type(3) img {
+    object-position: 50% 80%;
+}
+
+.destination-section a:nth-of-type(4) img {
+    object-position: 50% 20%
+}
+
+/* Text formatting */
+.initialbody {
+    width: 100%;
+    padding: 20px 0;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 500;
+    color: white;
+    background-color: #333;
+    padding-bottom: 100px;
+    overflow-x: hidden;
+}
+
+.initialbody h2, .initialbody p {
+    margin-left: 15px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 100px;
+    left: 2px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+}
+
+.caption a {
+    color: white;
+    text-decoration: none;
+}
+
+.slide:nth-child(2) .caption {
+    top: 100px;
+    left: 19%;
+}
+  
+.slide:nth-child(3) .caption {
+    bottom: 50px;
+    left: 5px;
+}
+  
+.slide:nth-child(4) .caption {
+    bottom: 70px;
+    left: 25%;
+}
+
+.destination-text {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    color: black;
 }
 
 /* Shrinking navbar */
@@ -123,7 +268,7 @@ body, html {
     opacity: 0;
 }
 
-.navbar.shrink #insertLine {
+.navbar.shrink .insertLine {
     top: -6px; /* adjust divider position */
 }
 
@@ -142,3 +287,156 @@ body, html {
     height: auto;
 }
 
+/* Slideshow CSS */
+.slideshow-section {
+    background-color: red;
+    padding: 120px 0;
+    text-align: center;
+}
+  
+.slideshow-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: -120px;
+    height: 640px;
+}
+  
+.slide img {
+    width: 100vw;
+    height: 640px;
+    object-fit: cover;
+    display: block;
+    padding-top: 10px;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+  
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    z-index: 0;
+}
+
+.dots {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+  
+.dot {
+    height: 14px;
+    width: 14px;
+    margin: 0 5px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+  
+.dot.active {
+    background-color: red;
+}
+  
+/* Location card styling */
+.location-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: center;
+    margin: -60px 0 40px 0;
+}
+  
+.card {
+    display: block;
+    text-decoration: none;
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+.location-cards .card:nth-child(1)::before {
+    background-image: url('images/coastcard.jpg');
+}
+
+.location-cards .card:nth-child(2)::before {
+    background-image: url('images/mountaincard.jpg');
+}
+
+.location-cards .card:nth-child(3)::before {
+    background-image: url('images/junglecard.jpg');
+}
+
+.card:hover::before {
+    transform: scale(1.1);
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+    font-family: 'Baloo 2',sans-serif ;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+}
+
+.card-content a {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background-color: #c62828;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.card-content a:hover {
+    background-color: #a71d1d;
+}
+
+  
