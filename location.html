@@ -6,26 +6,41 @@
     <title>Visit Peru!</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="indexStyle.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="images/peruicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="cultureStyle.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/peruicon.png">
 </head>
 <body>
-<nav class="navbar">    
-    <h1 id="title">Welcome to the Perú Tourism Guide!</h1>  
-    <div class="logo">
-        <a href="index.html">
-            <img src="images/peruicon.png" alt="logo">
-        </a>
-    </div>           
-    <div class="menu">       
-        <ul>
+    <div class="navbar">
+        <div class="top-row">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/peruicon.png" alt="Logo">
+            </a>
+          </div>
+          <h1 id="title">Welcome to the Perú Tourism Guide!</h1>
+        </div>
+        <div class="menu">       
+          <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="cities.html">Cities</a></li>
+            <li><a href="cities/cities.html">Cities</a></li>
             <li><a href="location.html">Destinations</a></li>
             <li><a href="food.html">Gastronomy</a></li>
             <li><a href="culture.html">Culture</a></li>
             <li><a href="trip.html">Plan your trip</a></li>
-        </ul>
+          </ul>
+        </div>
+        <div class="insertLine"></div>
     </div>
-    <div id="insertLine"></div>
-</nav>
+    <div id="navbar-spacer"></div>
+    <div class="topimg-section">
+      <img src="images/coastcard.jpg" alt="Machu Picchu">
+      <div class="topimg-caption">
+        <h2>Destinations</h2>
+      </div>
+    </div>
+    <div class="insertLine"></div>
+<script src="cities.js"></script>
+</body>
+
+</html>
