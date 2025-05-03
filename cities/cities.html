@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Peru!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="citiesStyle.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/peruicon.png">
+</head>
+<body>
+    <div class="navbar">
+        <div class="top-row">
+          <div class="logo">
+            <a href="index.html">
+              <img src="../images/peruicon.png" alt="Logo">
+            </a>
+          </div>
+          <h1 id="title">Welcome to the Perú Tourism Guide!</h1>
+        </div>
+        <div class="menu">       
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="cities.html">Cities</a></li>
+            <li><a href="../location.html">Destinations</a></li>
+            <li><a href="../food.html">Gastronomy</a></li>
+            <li><a href="../culture.html">Culture</a></li>
+            <li><a href="../trip.html">Plan your trip</a></li>
+          </ul>
+        </div>
+        <div class="insertLine"></div>
+    </div>
+    <div id="navbar-spacer"></div>
+    <div class="topimg-section">
+      <img src="../images/machupicchupic.jpg" alt="Machu Picchu">
+      <div class="topimg-caption">
+        <h2>Cities</h2>
+      </div>
+    </div>
+    <div class="insertLine"></div>
+    <div class="filter-section">
+      <input type="text" id="searchInput" placeholder="Search for a city...">
+      <select id="regionFilter">
+        <option value="all">All Regions</option>
+        <option value="coast">Coast</option>
+        <option value="mountain">Mountain</option>
+        <option value="jungle">Jungle</option>
+        <option value="desert">Desert</option>
+      </select>
+    </div>
+
+    <div class="cities-grid">
+      <div class="city-card" data-name="Lima" data-region="coast">
+        <a href="lima.html">
+        <img src="../images/coastcard.jpg" alt="Lima">
+        <h3>Lima</h3>
+        </a>
+      </div>
+    
+      <div class="city-card" data-name="Cusco" data-region="mountain">
+        <a href="cusco.html">
+        <img src="../images/mountaincard.jpg" alt="Cusco">
+        <h3>Cusco</h3>
+        </a>
+      </div>
+    
+      <div class="city-card" data-name="Iquitos" data-region="jungle">
+        <a href="iquitos.html">
+        <img src="../images/junglecard.jpg" alt="Iquitos">
+        <h3>Iquitos</h3>
+        </a>
+      </div>
+    
+      <div class="city-card" data-name="Arequipa" data-region="mountain">
+        <a href="arequipa.html">
+        <img src="../images/arequipapic.jpg" alt="Arequipa">
+        <h3>Arequipa</h3>
+        </a>
+      </div>
+
+      <div class="city-card" data-name="Ica" data-region="desert">
+        <a href="ica.html">
+        <img src="../images/huacachinapic.jpg" alt="Ica">
+        <h3>Ica</h3>
+        </a>
+      </div>
+
+      <!-- add more city cards as needed -->
+    </div>
+<script src="cities.js"></script>
+</body>
+    
+</html>
