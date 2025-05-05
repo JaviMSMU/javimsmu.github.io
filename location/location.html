@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Peru!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="locationStyle.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/peruicon.png">
+</head>
+<body>
+    <div class="navbar">
+        <div class="top-row">
+          <div class="logo">
+            <a href="../index.html">
+              <img src="../images/peruicon.png" alt="Logo">
+            </a>
+          </div>
+          <h1 id="title">Welcome to the Perú Tourism Guide!</h1>
+        </div>
+        <div class="menu">       
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../cities/cities.html">Cities</a></li>
+            <li><a href="location.html">Destinations</a></li>
+            <li><a href="../food/food.html">Gastronomy</a></li>
+            <li><a href="../culture/culture.html">Culture</a></li>
+          </ul>
+        </div>
+        <div class="insertLine"></div>
+    </div>
+    <div id="navbar-spacer"></div>
+    <div class="topimg-section">
+      <img src="../images/locationtopimg.jpg" alt="Lima Palace">
+      <div class="topimg-caption">
+        <h2>Destinations</h2>
+      </div>
+    </div>
+    <div class="insertLine"></div>
+    <div class="location-section">
+      <div class="left">
+      <h2>Peru's Experiences</h2>
+      <p>Peru has plenty of experiences spread throughout their 3 regions,
+        the coast, the mountains and the jungle. Some examples include the 
+        highest lake in the world (by altitude), spooky catacombs in the
+        city of Lima, and the infamous Machu Picchu nestled deep within 
+        the Andes. It's all about choosing what experiences fit you best!
+        Using the search bar below, find your preferred experience, Peru 
+        has something for everyone!
+      </p>
+      </div>
+      <div class="right"></div>
+    </div>
+    <div class="insertLine"></div>
+      <div class="filter-section">
+        <h2>Choose your experience!</h2>
+        <input type="text" id="searchInput" placeholder="Choose your experience...">
+        <select id="typeFilter">
+          <option value="all">All Experiences</option>
+          <option value="adventure">Adventure</option>
+          <option value="entertain">Entertainment</option>
+          <option value="history">History</option>
+          <option value="nature">Nature</option>
+        </select>
+      </div>
+      <div class="search-grid">
+        <div class="experience-card" data-name="Machu Picchu" data-type="adventure">
+          <a href="machupicchu.html">
+          <img src="../images/machupicchupic.jpg" alt="Machu Picchu, Peru">
+          <h3>Machu Picchu</h3>
+          </a>
+        </div>
+      
+        <div class="experience-card" data-name="Huacachina Oasis" data-type="adventure">
+          <a href="huacachina.html">
+          <img src="../images/oasiscard.jpg" class="fix" alt="Desert Oasis, Peru">
+          <h3>Huacachina Oasis</h3>
+          </a>
+        </div>
+      
+        <div class="experience-card" data-name="Nazca Lines" data-type="history">
+          <a href="nazca.html">
+          <img src="../images/nazcacard.jpg" alt="Nazca Lines, Peru">
+          <h3>Nazca Lines</h3>
+          </a>
+        </div>
+      
+        <div class="experience-card" data-name="Magic Water Circuit" data-type="entertain">
+          <a href="watercircuit.html">
+          <img src="../images/watercircuitcard.jpg" class="fix" alt="Water Park in Lima, Peru">
+          <h3>Magic Water Circuit</h3>
+          </a>
+        </div>
+  
+        <div class="experience-card" data-name="Lake Titicaca" data-type="nature">
+          <a href="laketiticaca.html">
+          <img src="../images/lakecard.jpg" alt="Lake Titicaca, Peru">
+          <h3>Lake Titicaca</h3>
+          </a>
+        </div>
+        
+      </div>
+  <script src="location.js"></script>
+  </body>
+      
+  </html>
+  
