@@ -80,6 +80,12 @@ body, html {
     transition: transform 0.4s ease, top 0.4s ease, left 0.4s ease;
 }
 
+.logo a {
+    display: inline-block;
+    position: relative;
+    z-index: 1100;
+}  
+
 .logo img {
     width: 130px; /* default size */
     height: auto;
